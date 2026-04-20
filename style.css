@@ -1,0 +1,180 @@
+:root {
+    --primary: #003366;
+    --secondary: #ffcc00;
+    --accent: #00a8cc;
+    --text: #333;
+    --white: #ffffff;
+}
+
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--text); line-height: 1.6; background: #f4f7f6; }
+
+/* Header & Nav */
+header { background: var(--white); padding: 15px 5%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.header-container { display: flex; justify-content: space-between; align-items: center; }
+.logo-box { display: flex; align-items: center; gap: 15px; }
+.school-logo { height: 80px; width: 80px; border-radius: 60%; }
+.school-titles h1 { font-size: 1.6rem; color: var(--primary); margin: 0; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; transition: 0.3s; }
+.nav-links a:hover { color: var(--accent); }
+
+/* Hero Section */
+.hero { background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('images/hero.jpg'); 
+        height: 80vh; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+.hero-content h2 { font-size: 3rem; margin-bottom: 10px; }
+
+/* Section Styling */
+section { padding: 60px 8%; }
+h2.section-title { text-align: center; color: var(--primary); margin-bottom: 40px; font-size: 2.2rem; }
+
+/* Grid Systems */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; border-bottom: 5px solid var(--secondary); }
+.card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+
+/* Footer */
+footer { background: var(--primary); color: white; padding: 60px 8% 20px; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+.footer-logo { height: 80px; margin-bottom: 20px; background: white; padding: 5px; border-radius: 50%; }
+.footer-bottom { text-align: center; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; }
+/* --- Stats Bar Container --- */
+.stats-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures it looks good on mobile */
+    background: #ffffff;
+    padding: 60px 5%;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    gap: 20px;
+}
+
+/* --- Individual Stat Item --- */
+.stat-item {
+    flex: 1;
+    min-width: 200px; /* Prevents them from getting too squished */
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: all 0.4s ease; /* Smooth transition for hover effect */
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+/* --- Icon Styling --- */
+.stat-item i {
+    font-size: 3rem;
+    color: var(--accent); /* Uses your light blue accent */
+    margin-bottom: 15px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* --- Numbers (H3) --- */
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--primary); /* Deep School Blue */
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+/* --- Labels (P) --- */
+.stat-item p {
+    font-size: 1.1rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* --- Hover Effects --- */
+.stat-item:hover {
+    transform: translateY(-10px); /* Lifts the card up */
+    background: var(--white);
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.1); /* Adds a blue-ish shadow */
+    border-bottom: 4px solid var(--secondary); /* Adds a gold line on hover */
+}
+
+.stat-item:hover i {
+    transform: scale(1.2); /* Makes the icon grow slightly */
+    color: var(--secondary); /* Icon turns gold on hover */
+}
+
+/* --- Responsive View for Mobile --- */
+@media (max-width: 768px) {
+    .stats-bar {
+        padding: 30px 5%;
+    }
+    
+    .stat-item {
+        min-width: 45%; /* Shows 2 items per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-item {
+        min-width: 100%; /* Full width on small phones */
+    }
+}
+/* Table Container for Responsiveness */
+.disclosure-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto; /* Ensures table doesn't break layout on mobile */
+}
+
+/* Table Styling */
+.disclosure-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.disclosure-table thead tr {
+    background-color: #003366; /* Matching your school's primary blue */
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.disclosure-table th,
+.disclosure-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+/* Alternating Row Colors */
+.disclosure-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.disclosure-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.disclosure-table tbody tr:last-of-type {
+    border-bottom: 2px solid #003366;
+}
+
+/* Hover Effect */
+.disclosure-table tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+/* Link Styling within Table */
+.disclosure-table a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.disclosure-table a:hover {
+    text-decoration: underline;
+    color: #ff6600; /* Subtle accent color for links */
+}

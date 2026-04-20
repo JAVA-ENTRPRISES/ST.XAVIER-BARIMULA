@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery | ST. XAVIERS SCHOOL</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
+        .gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; cursor: pointer; transition: 0.3s; }
+        .gallery-grid img:hover { transform: scale(1.05); filter: brightness(80%); }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <section>
+        <h2 class="section-title">School Moments</h2>
+        <div class="gallery-grid">
+            <img src="./image/Gemini_Generated_Image_w4e7f7w4e7f7w4e7.png" alt="Event 1">
+            <img src="./image/Gemini_Generated_Image_2y0n5z2y0n5z2y0n.png" alt="Event 2">
+            <img src="./image/SCIENCE EXHIBITION.jpg" alt="Event 3">
+            <img src="./image/SPORTS.jpg" alt="Event 4">
+            <img src="./image/COMPOSITE.jpg" alt="Event 5">
+            <img src="./image/ANNUAL FUNC.jpg" alt="Event 6">
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+</body>
+</html>
